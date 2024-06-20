@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees List</title>
+</head>
+<body>
+    
+    <h1>Employees</h1>
+    <ul>
+        <% if (Array.isArray(employees) && employees.length) { %>
+            <% employees.forEach(function(employee) { %>
+                <li><%= employee.name %> - <%= employee.email %> - <%= employee.jobPosition %> - <%= employee.jobLevel %> - <%= employee.salary %></li>
+            <% }); %>
+        <% } else { %>
+            <li>No employees found.</li>
+        <% } %>
+    </ul>
+</body>
+</html>
